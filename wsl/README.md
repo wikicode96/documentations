@@ -28,7 +28,7 @@ wsl --list --online
 
 A continuación para instalar la distro deseada:
 ```shell
-wsl --install --distribution Ubuntu
+wsl --install --distribution <Distro>
 ```
 Se puede usar la flag --distribution o -d
 
