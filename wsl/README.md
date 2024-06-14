@@ -1,5 +1,8 @@
 
-![wsl img](wsl.png)
+<div style="text-align: center;">
+  <img src="wsl.png" alt="wsl img" />
+</div>
+
 # Windows Subsystem for Linux (WSL)
 Es una característica de Windows que permite ejecutar distribuciones de Linux directamente en Windows sin necesidad de una máquina virtual o un arranque dual (dual-boot).
 WSL permite ejecutar binarios de Linux en Windows, facilitando la integración de herramientas de desarrollo que antes requerían un sistema Linux separado.
