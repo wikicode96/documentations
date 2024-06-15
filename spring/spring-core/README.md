@@ -1,6 +1,22 @@
 # Spring Core
 Spring Core es el núcleo del Spring Framework, proporcionando una base robusta para la configuración y gestión de componentes en aplicaciones Java. Este documento explora los conceptos más importantes de Spring Core, incluyendo Inversión de Control (IoC) y la Inyección de Dependencias (DI).
 
+## Tabla de Contenidos
+- [Inversión de Control (IoC)](#inversión-de-control-ioc)
+  - [Contenedor IoC](#contenedor-ioc)
+  - [Tipos de IoC](#tipos-de-ioc)
+- [Inyección de Dependencias (DI)](#inyección-de-dependencias-di)
+  - [Tipos de DI](#tipos-de-di)
+- [Beans en Spring](#beans-en-spring)
+  - [Definición y Configuración de Beans](#definición-y-configuración-de-beans)
+  - [Alcance de los Beans (`@Scope`)](#alcance-de-los-beans-scope)
+  - [Ciclo de Vida de los Beans](#ciclo-de-vida-de-los-beans)
+- [Configuración de Spring](#configuración-de-spring)
+  - [Configuración XML](#configuración-xml)
+  - [Configuración basada en Anotaciones](#configuración-basada-en-anotaciones)
+  - [Configuración basada en Java](#configuración-basada-en-java)
+- [Referencias](#referencias)
+
 ## Inversión de Control (IoC)
 ### Contenedor IoC
 El contenedor IoC de Spring es responsable de gestionar la configuración y el ciclo de vida de los objetos (beans). El contenedor utiliza la configuración proporcionada para instanciar, ensamblar y gestionar los beans de la aplicación.
