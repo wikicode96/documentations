@@ -86,6 +86,50 @@ public class AppConfig {
 }
 ```
 
+### Alcance de los Beans (@Scope)
+La anotación @Scope se utiliza para definir el alcance (scope) de un bean, determinando el ciclo de vida y la visibilidad del bean en la aplicación. Los scopes más comunes son:
+
+* Singleton: Este es el scope predeterminado. Un solo objeto bean se crea por contenedor de Spring y se comparte en toda la aplicación.
+
+```Java
+@Component
+@Scope("singleton")
+public class MyService {
+}
+```
+
+* Prototype: Cada solicitud de bean crea una nueva instancia.
+```Java
+@Component
+@Scope("prototype")
+public class MyService {
+}
+```
+
+* Request: Una nueva instancia de bean se crea para cada solicitud HTTP. Este scope es aplicable en aplicaciones web.
+```Java
+@Component
+@Scope("request")
+public class MyService {
+}
+```
+
+* Session: Una nueva instancia de bean se crea para cada sesión HTTP. Este scope es aplicable en aplicaciones web.
+```Java
+@Component
+@Scope("session")
+public class MyService {
+}
+```
+
+* Application: Una única instancia de bean se comparte a lo largo del contexto de la aplicación.
+```Java
+@Component
+@Scope("application")
+public class MyService {
+}
+```
+
 ### Ciclo de Vida de los Beans
 El ciclo de vida de un bean incluye varias fases:
 
