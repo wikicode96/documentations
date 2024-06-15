@@ -24,7 +24,7 @@ MyBean myBean = context.getBean(MyBean.class);
 La Inyección de Dependencias (DI) permite que las dependencias de los objetos sean proporcionadas en lugar de ser creadas o buscadas por el propio objeto. Esto facilita el desacoplamiento de los componentes y la inyección de implementaciones alternativas para pruebas o configuraciones diferentes.
 
 ### Tipos de DI
-* Constructor:
+* Inyección de Constructor:
 ```Java
 @Component
 public class MyService {
@@ -37,7 +37,7 @@ public class MyService {
 }
 ```
 
-* Setter:
+* Inyección de Setter:
 ```Java
 @Component
 public class MyService {
@@ -50,7 +50,7 @@ public class MyService {
 }
 ```
 
-* Campo:
+* Inyección de Campo:
 ```Java
 @Component
 public class MyService {
@@ -65,7 +65,7 @@ Un Bean en Spring es un objeto que el contenedor IoC instancia, configura y gest
 
 * XML:
 ```XML
-<bean id="myService" class="com.example.MyService"/>
+<bean id="myService" class="com.package.MyService"/>
 ```
 
 * Anotaciones:
@@ -110,6 +110,95 @@ public class MyService {
 }
 ```
 
+### Diferencias en el ciclo de vida según el tipo de DI
+Ejecutaremos el siguiente código de ejemplo y observaremos la salida que nos devuelve el programa cuando se inyecta por campo y cuando se inyecta por constructor.
+
+Primero ejecutaremos el código inyectando por campo:
+```Java
+@RestController
+public class DemoController {
+
+    @Autowired
+    private DemoService service;
+
+    public DemoController() {
+        System.out.println("Soy el Controller! Estoy inyectando el Servicio por campo.");
+    }
+
+    @PreDestroy
+    public void init() {
+        System.out.println("Soy el Controller y este es el final de mi ciclo de vida!");
+    }
+}
+```
+```Java
+@Service
+public class DemoService {
+
+    public DemoService() {
+        System.out.println("Soy el Servicio y he sido creago!");
+    }
+
+    @PreDestroy
+    public void init() {
+        System.out.println("Soy el Servicio y este es el final de mi ciclo de vida!");
+    }
+}
+```
+
+Al inyectar por campo la salida del programa será la siguiente:
+```
+Soy el Controller! Estoy inyectando el Servicio por campo.
+Soy el Servicio y he sido creago!
+
+Soy el Controller y este es el final de mi ciclo de vida!
+Soy el Servicio y este es el final de mi ciclo de vida!
+```
+
+Ahora ejecutaremos el código inyectando por constructor:
+```Java
+@RestController
+public class DemoController {
+
+    private DemoService service;
+
+    public DemoController(DemoService service) {
+        System.out.println("Soy el Controller! Estoy inyectando el Servicio por campo.");
+        this.service = service;
+    }
+
+    @PreDestroy
+    public void init() {
+        System.out.println("Soy el Controller y este es el final de mi ciclo de vida!");
+    }
+}
+```
+```Java
+@Service
+public class DemoService {
+
+    public DemoService() {
+        System.out.println("Soy el Servicio y he sido creago!");
+    }
+
+    @PreDestroy
+    public void init() {
+        System.out.println("Soy el Servicio y este es el final de mi ciclo de vida!");
+    }
+}
+```
+
+Al inyectar por constructor la salida del programa será la siguiente:
+```
+Soy el Servicio y he sido creago!
+Soy el Controller! Estoy inyectando el Servicio por campo.
+
+Soy el Controller y este es el final de mi ciclo de vida!
+Soy el Servicio y este es el final de mi ciclo de vida!
+```
+
+Si observamos al inyectar por campo primero se inicializará el Bean padre que inyecta sus dependencias, por el contrario al inyectar por constructor se inicializará primeramente los Beans hijos, incluso si prestamos atención la línea de código this.service = service; se ejecuta antes que el mensaje del constructor a pesar de estar por detrás de ella.
+
 ## Configuración de Spring
 Spring permite la configuración de múltiples maneras:
 
@@ -127,7 +216,7 @@ La configuración tradicional utiliza archivos XML para definir los beans y sus 
 ### Configuración basada en Anotaciones
 Utiliza anotaciones en las clases Java para definir la configuración de los beans.
 ```Java
-@ComponentScan("com.example")
+@ComponentScan("com.package")
 public class AppConfig {
 }
 ```
@@ -136,7 +225,7 @@ public class AppConfig {
 Define la configuración en clases Java usando la anotación @Configuration.
 ```Java
 @Configuration
-@ComponentScan("com.example")
+@ComponentScan("com.package")
 public class AppConfig {
     @Bean
     public MyService myService() {
