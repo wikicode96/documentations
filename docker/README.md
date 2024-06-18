@@ -1,5 +1,10 @@
 ![alt text](../images/docker.png)
 # Docker Documentation
+## Guardar la imagen como un archivo .tar
+Usa el comando docker save para exportar la imagen a un archivo .tar:
+```bash
+docker save -o nombre_archivo.tar nombre_imagen:tag
+```
 
 ## Cargar una imagen en .tar con
 Imaginemos que tenemos un archivo **myimage.tar** y quieres que la imagen se etiquete como **myapp:latest**. Aquí está el flujo completo:
