@@ -1,4 +1,4 @@
-package com.github.wikicode96.spring_security_db;
+package com.github.wikicode96.spring.security.db;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
