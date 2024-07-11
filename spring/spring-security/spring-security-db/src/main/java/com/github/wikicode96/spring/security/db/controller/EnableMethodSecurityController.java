@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 @PreAuthorize("denyAll()")
 public class EnableMethodSecurityController {
 
-    @GetMapping("/hello-basic")
-    @PreAuthorize("hasRole('ADMIN')")
+    @GetMapping("/hello-read")
+    @PreAuthorize("hasAuthority('READ')")
     public String helloPublic() {
-        return "Hello basic role";
+        return "Hello read";
     }
 
     @GetMapping("/hello-admin")
