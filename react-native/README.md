@@ -1,3 +1,4 @@
+![react-native](./images/react-native.png)
 # React Native
 React Native es un marco de desarrollo de código abierto creado por Facebook que se utiliza para construir aplicaciones móviles multiplataforma (iOS y Android) utilizando JavaScript y React. React Native utiliza componentes de la interfaz de usuario nativos, lo que resulta en un rendimiento rápido y una apariencia nativa en las aplicaciones móviles.
 
@@ -18,13 +19,19 @@ Expo es una plataforma de código abierto que simplifica y acelera el desarrollo
 ```shell
 npx create-expo-app@latest
 ```
-* Crear un proyecto vacio
+* Crear un proyecto en blanco
+```shell
+npx create-expo-app@latest --template blank
+```
 
 ## Ejecutar proyecto
+Ejecutar el siguiente comando:
 ```shell
 npm start
 ```
 En la consola se muestra las instrucciones para abrir la app en diferentes dispositivos.
 
 ### Ejecutar el proyecto con el QR
-Si deseas abrir la aplicación en tu dispositivo movil leyendo el código QR necesitas tener instalada la app **Expo Go**.
+Si deseas abrir la aplicación en tu dispositivo movil leyendo el código QR necesitas tener instalada la app **Expo Go** en Android.
+
+Para lograr que vuelva a aprecer el menú de Expo Go basta con agitar el dispositivo movil para que vuelva a mostrarse.
