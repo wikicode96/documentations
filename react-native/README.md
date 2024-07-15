@@ -14,7 +14,7 @@ npm --version
 ## Uso de Expo
 Expo es una plataforma de código abierto que simplifica y acelera el desarrollo de aplicaciones móviles con React Native. Proporciona una serie de herramientas y servicios que permiten a los desarrolladores crear aplicaciones móviles de manera más rápida y sencilla, sin necesidad de configurar y mantener complejas infraestructuras.
 
-## Crear un proyecto
+## Crear un nuevo proyecto con Expo
 * Crear un proyecto base
 ```shell
 npx create-expo-app@latest
@@ -35,3 +35,188 @@ En la consola se muestra las instrucciones para abrir la app en diferentes dispo
 Si deseas abrir la aplicación en tu dispositivo movil leyendo el código QR necesitas tener instalada la app **Expo Go** en Android.
 
 Para lograr que vuelva a aprecer el menú de Expo Go basta con agitar el dispositivo movil para que vuelva a mostrarse.
+
+## Implementar TypeScript
+1. Cambiar el formato a los archivos
+Cambie el nombre de los archivos para utilizar la extensión .tsx o .ts
+```shell
+mv App.js App.tsx
+```
+
+2. Instalar las dependencias de desarrollo necesarias
+Para instalar dependencias de desarrollo como typescript y @types/react en package.json:
+```shell
+npx expo install -- --save-dev typescript @types/react
+```
+
+3. Agregar la configuración base con tsconfig.json
+Puede generar automáticamente un archivo tsconfig.json ejecutando el comando:
+```shell
+npx expo customize tsconfig.json
+```
+
+Recomiendo tener el archivo tsconfig.json con la siguiente configuración:
+```json
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
+}
+```
+El archivo tsconfig.json de un proyecto debe extender de **expo/tsconfig.base** de forma predeterminada.
+
+## Componentes en React Native
+En esta sección haré un breve resumen de los componentes más usados de React Native. Para más información ir a la documentación original en el siguiente enlace: https://reactnative.dev/docs/components-and-apis#basic-components
+
+### Componentes básicos
+* **View:** Similar a un \<div> en HTML.
+```HTML
+<View style={{backgroundColor: 'blue', flex: 0.3}} />
+```
+
+* **Text:** Para imprimir Texto.
+```HTML
+<Text>Hello World!</Text>
+```
+
+* **Image:** Usado para mostrar imagenes.
+```HTML
+<Image 
+    style={styles.tinyLogo} 
+    source={require('@expo/snack-static/logo.png')}
+/>
+```
+```HTML
+<Image
+    style={styles.tinyLogo}
+    source={{
+        uri: 'https://reactnative.dev/img/tiny_logo.png',
+    }}
+/>
+```
+
+* **TextInput:** Para formularios y entradas de Texto.
+```HTML
+<TextInput
+    style={styles.input}
+    onChangeText={onChangeText}
+    value={text}
+/>
+```
+```HTML
+<TextInput
+    style={styles.input}
+    onChangeText={onChangeNumber}
+    value={number}
+    placeholder="useless placeholder"
+    keyboardType="numeric"
+/>
+```
+
+* **ScrollView:** Te permitirá dar scroll en tu app y puede tener múltiples componentes dentro.
+```HTML
+<ScrollView style={styles.scrollView}>
+```
+
+* **StyleSheet:** Para darle apariencia a tu App, similar a CSS.
+```TypeScript
+import React from 'react';
+import {StyleSheet, Text, View} from 'react-native';
+
+const App = () => (
+  <View style={styles.container}>
+    <Text style={styles.title}>React Native</Text>
+  </View>
+);
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 24,
+    backgroundColor: '#eaeaea',
+  },
+  title: {
+    marginTop: 16,
+    paddingVertical: 8,
+    borderWidth: 4,
+    borderColor: '#20232a',
+    borderRadius: 6,
+    backgroundColor: '#61dafb',
+    color: '#20232a',
+    textAlign: 'center',
+    fontSize: 30,
+    fontWeight: 'bold',
+  },
+});
+
+export default App;
+```
+
+### Componentes de Interfaz de Usuario
+* **Button:** Un componente de botón básico. Admite un nivel mínimo de personalización.
+```HTML
+<Button
+  onPress={onPressLearnMore}
+  title="Learn More"
+  color="#841584"
+  accessibilityLabel="Learn more about this purple button"
+/>
+```
+
+* **Switch:**
+```HTML
+<Switch
+    trackColor={{false: '#767577', true: '#81b0ff'}}
+    thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'}
+    ios_backgroundColor="#3e3e3e"
+    onValueChange={toggleSwitch}
+    value={isEnabled}
+/>
+```
+### Componentes de Listas
+
+## Expo Router
+### Navegar entre páginas
+Documentación completa: https://docs.expo.dev/router/introduction/
+Necesitamos instalar la dependencia expo-router:
+```shell
+npx expo install expo-router react-native-safe-area-context react-native-screens expo-linking expo-constants expo-status-bar
+```
+
+Necesitamos agregar una configuración de scheme en tu archivo de configuración de Expo **app.config.js**. Este scheme es necesario para la vinculación profunda (deep linking) en aplicaciones de producción.
+
+```text
+{
+  "expo": {
+    "name": "my-app",
+    "slug": "my-app",
+    "version": "1.0.0",
+    "scheme": "myapp",  // Añade esta línea
+    "platforms": ["ios", "android"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    ...
+```
+
+Cuando se crea un archivo en el directorio de la aplicación, automáticamente se convierte en una ruta en la aplicación. Por ejemplo, los siguientes archivos crearán las siguientes rutas:
+![expo-router](images/expo-router.png)
+
+Expo Router utiliza "enlaces" para moverse entre páginas de la aplicación. Esto es conceptualmente similar a cómo funciona la web con **\<a>** las etiquetas y los **href** atributos.
+
+1. Importaremos la dependencia:
+```TypeScript
+import { Link } from 'expo-router';
+```
+2. Y podremos usar el componente Link:
+```HTML
+<Link href="/about">About</Link>
+```
+
+### Rutas de diseño
+En las aplicaciones nativas, los usuarios esperan que los elementos compartidos, como los encabezados y las barras de pestañas, persistan entre las páginas. Estos se crean mediante rutas de diseño.
