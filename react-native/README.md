@@ -207,7 +207,7 @@ Necesitamos agregar una configuración de scheme en tu archivo de configuración
 3. Configurar archivo package.json
 En ocasiones puede que el archivo **package.json**, en el atributo **"main"** tengamos que añadirle el siguiente valor de configuración:
 ```json
-"main": "expo/AppEntry.js"
+"main": "expo-router/entry"
 ```
 
 4. Uso del componente Link
