@@ -183,13 +183,13 @@ export default App;
 ## Expo Router
 ### Navegar entre páginas
 Documentación completa: https://docs.expo.dev/router/introduction/
-Necesitamos instalar la dependencia expo-router:
+1. Instalar la dependencia expo-router:
 ```shell
 npx expo install expo-router react-native-safe-area-context react-native-screens expo-linking expo-constants expo-status-bar
 ```
 
-Necesitamos agregar una configuración de scheme en tu archivo de configuración de Expo **app.config.js**. Este scheme es necesario para la vinculación profunda (deep linking) en aplicaciones de producción.
-
+2. Configurar archivo app.json
+Necesitamos agregar una configuración de scheme en tu archivo de configuración de Expo **app.json**. Este scheme es necesario para la vinculación profunda (deep linking) en aplicaciones de producción.
 ```text
 {
   "expo": {
@@ -204,6 +204,13 @@ Necesitamos agregar una configuración de scheme en tu archivo de configuración
     ...
 ```
 
+3. Configurar archivo package.json
+En ocasiones puede que el archivo **package.json**, en el atributo **"main"** tengamos que añadirle el siguiente valor de configuración:
+```json
+"main": "expo/AppEntry.js"
+```
+
+4. Uso del componente Link
 Cuando se crea un archivo en el directorio de la aplicación, automáticamente se convierte en una ruta en la aplicación. Por ejemplo, los siguientes archivos crearán las siguientes rutas:
 ![expo-router](images/expo-router.png)
 
