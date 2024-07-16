@@ -39,7 +39,7 @@ public class UserEntity {
     @Column(name = "password")
     private String password;
 
-    @Column(name = "is_enable")
+    @Column(name = "is_enabled")
     private boolean isEnable;
 
     @Column(name = "account_no_expired")
