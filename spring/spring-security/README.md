@@ -44,11 +44,11 @@ spring:
 ```
 
 ## Esquema básico de Spring Security
-![Spring Security Schema](images/spring-security-schema.png)
+![Spring Security Schema](img/spring-security-schema.png)
 Puedes ver la implementación de este esquema en el proyecto de demostración spring-security-db de este repositorio.
 
 Usando la interface AuthenticationProvider, estos son todos los proveedores de autenticatión disponibles con el starter básico Spring Security.
-![Authentication Providers](images/authentication-providers.png)
+![Authentication Providers](img/authentication-providers.png)
 
 Explicación de alguno de ellos:
 * **DaoAuthenticationProvider:** Es el proveedor de autenticación más común. Utiliza un UserDetailsService para cargar los detalles del usuario (como nombre de usuario, contraseña y roles) desde una fuente de datos como una base de datos. Soporta la validación de contraseñas mediante un **PasswordEncoder**.

@@ -1,4 +1,4 @@
-![alt text](./images/docker.png)
+![alt text](./img/docker.png)
 # Docker Documentation
 ## Guardar la imagen como un archivo .tar
 Usa el comando docker save para exportar la imagen a un archivo .tar:
