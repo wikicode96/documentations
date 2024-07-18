@@ -25,43 +25,43 @@ https://docs.docker.com/desktop/troubleshoot/topics/#virtualization
 
 ## Comandos básicos
 ### Trabajar con imagenes
-* **Listar las imágenes**
+* Listar las imágenes
 ```shell
 docker image ls
 ```
 
-* **Crea y ejecuta un nuevo contenedor a partir de una imagen**
+* Crea y ejecuta un nuevo contenedor a partir de una imagen
 ```shell
 docker run -p 9092:9092 --name <NOMBRE CONTENEDOR> <IMAGE ID>
 ```
 
 ### Trabajar con contenedores
-* **Mostar los contenedores en cualquier estado**
+* Mostar los contenedores en cualquier estado
 ```shell
 docker ps -a
 ```
 
-* **Mostar los contenedores en ejecución**
+* Mostar los contenedores en ejecución
 ```shell
 docker ps
 ```
 
-* **Inicializar un contenedor detenido**
+* Inicializar un contenedor detenido
 ```shell
 docker start <NOMBRE CONTENEDOR o ID CONTENEDOR>
 ```
 
-* **Detener un contenedor**
+* Detener un contenedor
 ```shell
 docker stop <NOMBRE CONTENEDOR o ID CONTENEDOR>
 ```
 
-* **Detener todos los contenedores**
+* Detener todos los contenedores
 ```shell
 docker stop $(docker ps -q)
 ```
 
-* **Mostrar el log de la aplicación**
+* Mostrar el log de la aplicación
 ```shell
 docker logs <NOMBRE CONTENEDOR o ID CONTENEDOR>
 ```
