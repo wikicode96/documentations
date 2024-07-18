@@ -23,6 +23,49 @@ https://docs.docker.com/desktop/install/windows-install/
 No olvide habilitar la virtualización de hardware en BIOS. Documentación detallada en el siguiente enlace:
 https://docs.docker.com/desktop/troubleshoot/topics/#virtualization
 
+## Comandos básicos
+### Trabajar con imagenes
+* **Listar las imágenes**
+```shell
+docker image ls
+```
+
+* **Crea y ejecuta un nuevo contenedor a partir de una imagen**
+```shell
+docker run -p 9092:9092 --name <NOMBRE CONTENEDOR> <IMAGE ID>
+```
+
+### Trabajar con contenedores
+* **Mostar los contenedores en cualquier estado**
+```shell
+docker ps -a
+```
+
+* **Mostar los contenedores en ejecución**
+```shell
+docker ps
+```
+
+* **Inicializar un contenedor detenido**
+```shell
+docker start <NOMBRE CONTENEDOR o ID CONTENEDOR>
+```
+
+* **Detener un contenedor**
+```shell
+docker stop <NOMBRE CONTENEDOR o ID CONTENEDOR>
+```
+
+* **Detener todos los contenedores**
+```shell
+docker stop $(docker ps -q)
+```
+
+* **Mostrar el log de la aplicación**
+```shell
+docker logs <NOMBRE CONTENEDOR o ID CONTENEDOR>
+```
+
 ## Compresión de imagenes
 ### Guardar la imagen como un archivo .tar
 Usa el comando docker save para exportar la imagen a un archivo .tar:
