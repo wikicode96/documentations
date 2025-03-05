@@ -1,4 +1,4 @@
-![react-native](./img/react-native.png)
+![react-native](../img/react-native.png)
 # React Native
 React Native es un marco de desarrollo de código abierto creado por Facebook que se utiliza para construir aplicaciones móviles multiplataforma (iOS y Android) utilizando JavaScript y React. React Native utiliza componentes de la interfaz de usuario nativos, lo que resulta en un rendimiento rápido y una apariencia nativa en las aplicaciones móviles.
 
@@ -180,50 +180,5 @@ export default App;
 ```
 ### Componentes de Listas
 
-## Expo Router
-### Navegar entre páginas
-Documentación completa: https://docs.expo.dev/router/introduction/
-1. Instalar la dependencia expo-router:
-```shell
-npx expo install expo-router react-native-safe-area-context react-native-screens expo-linking expo-constants expo-status-bar
-```
-
-2. Configurar archivo app.json
-Necesitamos agregar una configuración de scheme en tu archivo de configuración de Expo **app.json**. Este scheme es necesario para la vinculación profunda (deep linking) en aplicaciones de producción.
-```text
-{
-  "expo": {
-    "name": "my-app",
-    "slug": "my-app",
-    "version": "1.0.0",
-    "scheme": "myapp",  // Añade esta línea
-    "platforms": ["ios", "android"],
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    ...
-```
-
-3. Configurar archivo package.json
-En ocasiones puede que el archivo **package.json**, en el atributo **"main"** tengamos que añadirle el siguiente valor de configuración:
-```json
-"main": "expo-router/entry"
-```
-
-4. Uso del componente Link
-Cuando se crea un archivo en el directorio de la aplicación, automáticamente se convierte en una ruta en la aplicación. Por ejemplo, los siguientes archivos crearán las siguientes rutas:
-![expo-router](img/expo-router.png)
-
-Expo Router utiliza "enlaces" para moverse entre páginas de la aplicación. Esto es conceptualmente similar a cómo funciona la web con **\<a>** las etiquetas y los **href** atributos.
-
-1. Importaremos la dependencia:
-```TypeScript
-import { Link } from 'expo-router';
-```
-2. Y podremos usar el componente Link:
-```HTML
-<Link href="/about">About</Link>
-```
-
-### Rutas de diseño
-En las aplicaciones nativas, los usuarios esperan que los elementos compartidos, como los encabezados y las barras de pestañas, persistan entre las páginas. Estos se crean mediante rutas de diseño.
+## React Navigation
+Documentación de [React Navigation](./react-navigation/README.md).
