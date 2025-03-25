@@ -4,7 +4,7 @@ services:
 
   # Postgres
   db:
-    image: postgres:15
+    image: postgres:latest
     container_name: postgres_db
     restart: always
     networks:
@@ -72,19 +72,26 @@ services:
     depends_on:
       - kafka
 
+  # Otel Collector
+  otel-collector:
+    image: otel/opentelemetry-collector:latest
+    container_name: otel-collector
+    networks:
+      - observability-net
+    volumes:
+      - ./otel-collector-config.yaml:/etc/otel-collector-config.yaml
+    command: [ "--config=/etc/otel-collector-config.yaml" ]
+
   # Jaeger
-#  jaeger:
-#    image: jaegertracing/all-in-one:latest
-#    container_name: jaeger
-#    networks:
-#      - observability-net
-#    ports:
-#      - "16686:16686" # the jaeger UI
-#      #- "4317:4317" # the OpenTelemetry collector grpc
-#    environment:
-#      - COLLECTOR_OTLP_ENABLED=true
-#    volumes:
-#      - observability_jaeger:/tmp
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    container_name: jaeger
+    ports:
+      - "16686:16686" # the jaeger UI
+    networks:
+      - observability-net
+    volumes:
+      - observability_jaeger:/tmp
 
   # Orders Microservice
   orders-service:

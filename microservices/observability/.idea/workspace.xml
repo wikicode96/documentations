@@ -4,45 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3338ded3-9892-4a2d-8608-5df2acc71eea" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/.idea/checkstyle-idea.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/orders-service/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/orders-service/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/orders-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/orders-service/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/orders-service/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/orders-service/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/orders-service/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/orders-service/src/main/java/com/github/wikicode96/orders/OrdersApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/orders-service/src/main/java/com/github/wikicode96/orders/config/KafkaProducerConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/orders-service/src/main/java/com/github/wikicode96/orders/config/OpenTelemetryConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/orders-service/src/main/java/com/github/wikicode96/orders/controller/OrderController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/orders-service/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/orders-service/src/test/java/com/github/wikicode96/orders/OrdersApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/payments-service/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/payments-service/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/payments-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/payments-service/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/payments-service/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/payments-service/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/payments-service/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/payments-service/src/main/java/com/github/wikicode96/payments/PaymentsApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/payments-service/src/main/java/com/github/wikicode96/payments/config/KafkaConsumerConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/payments-service/src/main/java/com/github/wikicode96/payments/config/OpenTelemetryConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/payments-service/src/main/java/com/github/wikicode96/payments/messaging/PaymentListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/payments-service/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/payments-service/src/test/java/com/github/wikicode96/payments/PaymentsApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed-tracing/payments-service/src/test/resources/application.yml" beforeDir="false" />
+    <list default="true" id="3338ded3-9892-4a2d-8608-5df2acc71eea" name="Changes" comment="rm distributed-tracing folder">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/orders-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/orders-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payments-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/payments-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payments-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/payments-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,17 +64,23 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "microservices/tracing",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/0020802/Documents/GitHub/documentations/microservices/observability/shared-models",
+    "last_opened_file_path": "C:/Users/0020802/Documents/GitHub/documentations/microservices/observability/orders-service/src/test",
     "onboarding.tips.debug.path": "C:/Users/0020802/Documents/GitHub/documentations/microservices/observability/shared-models/src/main/java/com/github/wikicode96/Main.java"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\0020802\Documents\GitHub\documentations\microservices\observability\orders-service\src\test" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.github.wikicode96.models" />
     </key>
   </component>
   <component name="RunManager" selected="Compound.All clean package">
     <configuration name="OrdersApplication" type="Application" factoryName="Application" nameIsGenerated="true">
+      <envs>
+        <env name="OTEL_COLLECTOR_HTTP" value="http://localhost:4318" />
+      </envs>
       <option name="MAIN_CLASS_NAME" value="com.github.wikicode96.orders.OrdersApplication" />
       <module name="orders-service" />
       <extension name="coverage">
@@ -134,7 +109,6 @@
     <configuration name="All clean package" type="CompoundRunConfigurationType">
       <toRun name="orders-service [clean,package]" type="MavenRunConfiguration" />
       <toRun name="payments-service [clean,package]" type="MavenRunConfiguration" />
-      <toRun name="shared-models" type="MavenRunConfiguration" />
       <method v="2" />
     </configuration>
     <configuration name="Run All" type="CompoundRunConfigurationType">
@@ -254,6 +228,19 @@
       <option name="presentableId" value="Default" />
       <updated>1742563191148</updated>
     </task>
+    <task id="LOCAL-00001" summary="rm distributed-tracing folder">
+      <option name="closed" value="true" />
+      <created>1742826960055</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1742826960055</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="rm distributed-tracing folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="rm distributed-tracing folder" />
   </component>
 </project>
