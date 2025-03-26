@@ -8,10 +8,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opentelemetry-javaagent.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/orders-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/orders-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/orders-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/payments-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/payments-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payments-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/payments-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,12 +63,14 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "microservices/tracing",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/0020802/Documents/GitHub/documentations/microservices/observability/orders-service/src/test",
+    "last_opened_file_path": "C:/Users/0020802/Documents/GitHub/documentations/microservices/observability/payments-service",
     "onboarding.tips.debug.path": "C:/Users/0020802/Documents/GitHub/documentations/microservices/observability/shared-models/src/main/java/com/github/wikicode96/Main.java"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\0020802\Documents\GitHub\documentations\microservices\observability\payments-service" />
+      <recent name="C:\Users\0020802\Documents\GitHub\documentations\microservices\observability\orders-service" />
       <recent name="C:\Users\0020802\Documents\GitHub\documentations\microservices\observability\orders-service\src\test" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">

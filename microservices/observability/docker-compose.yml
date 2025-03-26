@@ -15,6 +15,7 @@ services:
       POSTGRES_DB: observability
     volumes:
       - observability_db:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
 
   # Postgres DB UI
   pgadmin:

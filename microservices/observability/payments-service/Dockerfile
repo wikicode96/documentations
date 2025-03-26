@@ -8,7 +8,7 @@ WORKDIR /app
 COPY target/payments-service-0.0.1-SNAPSHOT.jar payments-service.jar
 
 # Copiar el agente de OpenTelemetry al contenedor
-COPY ../opentelemetry-javaagent.jar /otel/opentelemetry-javaagent.jar
+COPY ./opentelemetry-javaagent.jar /otel/opentelemetry-javaagent.jar
 
 # Configurar el agente con las opciones necesarias
 ENV JAVA_TOOL_OPTIONS="-javaagent:/otel/opentelemetry-javaagent.jar \
