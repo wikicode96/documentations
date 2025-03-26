@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3338ded3-9892-4a2d-8608-5df2acc71eea" name="Changes" comment="rm distributed-tracing folder">
+      <change afterPath="$PROJECT_DIR$/prometheus.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opentelemetry-javaagent.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/orders-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payments-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/payments-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/orders-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/orders-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/otel-collector-config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/otel-collector-config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payments-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/payments-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payments-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/payments-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -39,9 +39,9 @@ Si entramos a la dirección de Swagger UI del microservicio de ordenes podremos 
 A continuación podemos revisar la traza generada en Jaeger UI donde aparecerán todos los eventos internos (spans) y que micro los ha ejecutado.
 ![jaeger](./img/jaeger.png)
 
-| Puerto | Protocolo | Uso                                              |
-|--------|-----------|--------------------------------------------------|
-| 4317   | gRPC      | Recepción de trazas (traces) usando OTLP en gRPC |
-| 4318   | HTTP      | Recepción de trazas (traces) usando OTLP en HTTP |
-| 55678  | gRPC      | Recepción de métricas usando OTLP en gRPC        |
-| 55679  | HTTP      | Recepción de métricas usando OTLP en HTTP        |
+| Puerto | Protocolo | Uso                                       |
+|--------|-----------|-------------------------------------------|
+| 4317   | gRPC      | Recepción de trazas usando OTLP en gRPC   |
+| 4318   | HTTP      | Recepción de trazas usando OTLP en HTTP   |
+| 55678  | gRPC      | Recepción de métricas usando OTLP en gRPC |
+| 55679  | HTTP      | Recepción de métricas usando OTLP en HTTP |
