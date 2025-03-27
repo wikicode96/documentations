@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3338ded3-9892-4a2d-8608-5df2acc71eea" name="Changes" comment="grafana for observability">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;wikicode96&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/wikicode96/documentations.git&quot;,
+    &quot;accountId&quot;: &quot;851a4e10-ccd1-444c-8f83-60f1fb886948&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2ud0YAlvzGRWQtXLXgZSpeHjuAe" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.OrdersApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PaymentsApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.orders-service [clean,package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.payments-service [clean,package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.shared-models [clean,package].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;microservices/tracing&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/0020802/Documents/GitHub/documentations/microservices/observability/payments-service&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/0020802/Documents/GitHub/documentations/microservices/observability/shared-models/src/main/java/com/github/wikicode96/Main.java&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\0020802\Documents\GitHub\documentations\microservices\observability\payments-service" />
+      <recent name="C:\Users\0020802\Documents\GitHub\documentations\microservices\observability\orders-service" />
+      <recent name="C:\Users\0020802\Documents\GitHub\documentations\microservices\observability\orders-service\src\test" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.github.wikicode96.models" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Compound.All clean package">
+    <configuration name="OrdersApplication" type="Application" factoryName="Application" nameIsGenerated="true">
+      <envs>
+        <env name="OTEL_COLLECTOR_HTTP" value="http://localhost:4318" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="com.github.wikicode96.orders.OrdersApplication" />
+      <module name="orders-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.wikicode96.orders.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaymentsApplication" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.github.wikicode96.payments.PaymentsApplication" />
+      <module name="payments-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.wikicode96.payments.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All clean package" type="CompoundRunConfigurationType">
+      <toRun name="orders-service [clean,package]" type="MavenRunConfiguration" />
+      <toRun name="payments-service [clean,package]" type="MavenRunConfiguration" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Run All" type="CompoundRunConfigurationType">
+      <toRun name="OrdersApplication" type="Application" />
+      <toRun name="PaymentsApplication" type="Application" />
+      <method v="2" />
+    </configuration>
+    <configuration name="orders-service [clean,package]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="package" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/orders-service" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="payments-service [clean,package]" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="package" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/payments-service" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="shared-models [clean,package]" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="package" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/shared-models" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.OrdersApplication" />
+      <item itemvalue="Application.PaymentsApplication" />
+      <item itemvalue="Compound.Run All" />
+      <item itemvalue="Compound.All clean package" />
+      <item itemvalue="Maven.shared-models [clean,package]" />
+      <item itemvalue="Maven.orders-service [clean,package]" />
+      <item itemvalue="Maven.payments-service [clean,package]" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3338ded3-9892-4a2d-8608-5df2acc71eea" name="Changes" comment="" />
+      <created>1742563191148</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1742563191148</updated>
+    </task>
+    <task id="LOCAL-00001" summary="rm distributed-tracing folder">
+      <option name="closed" value="true" />
+      <created>1742826960055</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1742826960055</updated>
+    </task>
+    <task id="LOCAL-00002" summary="grafana for observability">
+      <option name="closed" value="true" />
+      <created>1743084023882</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1743084023882</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="rm distributed-tracing folder" />
+    <MESSAGE value="grafana for observability" />
+    <option name="LAST_COMMIT_MESSAGE" value="grafana for observability" />
+  </component>
+</project>

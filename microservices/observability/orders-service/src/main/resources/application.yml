@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: orders-service
+
+management:
+  metrics:
+    export:
+      otlp:
+        enabled: true
+        url: http://otel-collector:55679/v1/metrics

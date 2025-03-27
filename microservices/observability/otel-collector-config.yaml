@@ -1,0 +1,44 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+        endpoint: 0.0.0.0:4317 # gRPC traces
+      http:
+        endpoint: 0.0.0.0:4318 # HTTP traces
+  otlp/2:
+    protocols:
+      grpc:
+        endpoint: 0.0.0.0:55678 # gRPC metrics
+      http:
+        endpoint: 0.0.0.0:55679 # HTTP metrics
+
+processors:
+  batch:
+    timeout: 5s  # Timeout para el procesamiento en lotes
+    send_batch_size: 1024  # Número de elementos por lote
+
+exporters:
+#  debug:
+#    verbosity: detailed
+  otlp/jaeger:
+    endpoint: jaeger:4317 # Exporta las trazas a Jaeger (OTLP gRPC)
+    tls:
+      insecure: true # Desactivar TLS si no es necesario, solo para desarrollo
+  prometheus:
+    endpoint: 0.0.0.0:8889 # Exponer métricas para Prometheus
+    namespace: default
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [otlp/jaeger]
+    metrics:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [prometheus]
+#    logs:
+#      receivers: [otlp]
+#      processors: [batch]
+#      exporters: [debug]
