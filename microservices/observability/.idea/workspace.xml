@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3338ded3-9892-4a2d-8608-5df2acc71eea" name="Changes" comment="rm distributed-tracing folder">
-      <change afterPath="$PROJECT_DIR$/prometheus.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/orders-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/orders-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/otel-collector-config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/otel-collector-config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payments-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/payments-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payments-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/payments-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,21 +49,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.OrdersApplication.executor": "Run",
-    "Application.PaymentsApplication.executor": "Run",
-    "Maven.orders-service [clean,package].executor": "Run",
-    "Maven.payments-service [clean,package].executor": "Run",
-    "Maven.shared-models [clean,package].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "microservices/tracing",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/0020802/Documents/GitHub/documentations/microservices/observability/payments-service",
-    "onboarding.tips.debug.path": "C:/Users/0020802/Documents/GitHub/documentations/microservices/observability/shared-models/src/main/java/com/github/wikicode96/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.OrdersApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PaymentsApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.orders-service [clean,package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.payments-service [clean,package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.shared-models [clean,package].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;microservices/tracing&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/0020802/Documents/GitHub/documentations/microservices/observability/payments-service&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/0020802/Documents/GitHub/documentations/microservices/observability/shared-models/src/main/java/com/github/wikicode96/Main.java&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\0020802\Documents\GitHub\documentations\microservices\observability\payments-service" />

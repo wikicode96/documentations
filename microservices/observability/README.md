@@ -23,6 +23,7 @@ docker-compose down --volumes
 
 ## Herramientas disponibles
 * Swagger del microservicio que crea la ordén: http://localhost:8085/swagger-ui/index.html
+* Grafana: http://localhost:3000/
 * Kafka UI: http://localhost:8081/
 * pgAdmin 4: http://localhost:8080/
 * Jaeger UI: http://localhost:16686/search
@@ -36,9 +37,20 @@ Si entramos a la dirección de Swagger UI del microservicio de ordenes podremos 
 }
 ```
 
-A continuación podemos revisar la traza generada en Jaeger UI donde aparecerán todos los eventos internos (spans) y que micro los ha ejecutado.
+A continuación podremos revisar los parametros generados por nuestros micros en nuestras herramientas de observabilidad.
+1. Trazas en Jaeger:
 ![jaeger](./img/jaeger.png)
 
+2. Prometheus para metricas:
+![prometheus](./img/prometheus.png)
+
+Para visualizar en conjunto todos estos datos podremos configurar nuestros propios dashboards en Grafana:
+![grafana](./img/grafana.png)
+
+## Esquema del proyecto
+![](./img/observability.drawio.svg)
+
+## OTEL Collector
 | Puerto | Protocolo | Uso                                       |
 |--------|-----------|-------------------------------------------|
 | 4317   | gRPC      | Recepción de trazas usando OTLP en gRPC   |

@@ -85,6 +85,17 @@ services:
       - ./otel-collector-config.yaml:/etc/otel-collector-config.yaml
     command: [ "--config=/etc/otel-collector-config.yaml" ]
 
+  # Grafana
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    networks:
+      - observability-net
+    volumes:
+      - observability_grafana:/var/lib/grafana
+
   # Jaeger
   jaeger:
     image: jaegertracing/all-in-one:latest
@@ -140,5 +151,7 @@ volumes:
     name: observability_pgadmin
   observability_kafka_data:
     name: observability_kafka_data
+  observability_grafana:
+    name: observability_grafana
   observability_jaeger:
     name: observability_jaeger
