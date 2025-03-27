@@ -38,10 +38,11 @@ Si entramos a la dirección de Swagger UI del microservicio de ordenes podremos 
 ```
 
 A continuación podremos revisar los parametros generados por nuestros micros en nuestras herramientas de observabilidad.
-1. Trazas en Jaeger:
+
+1️⃣ Trazas en Jaeger:
 ![jaeger](./img/jaeger.png)
 
-2. Prometheus para metricas:
+2️⃣ Prometheus para metricas:
 ![prometheus](./img/prometheus.png)
 
 Para visualizar en conjunto todos estos datos podremos configurar nuestros propios dashboards en Grafana:

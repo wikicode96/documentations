@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3338ded3-9892-4a2d-8608-5df2acc71eea" name="Changes" comment="rm distributed-tracing folder">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3338ded3-9892-4a2d-8608-5df2acc71eea" name="Changes" comment="grafana for observability">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,11 +232,20 @@
       <option name="project" value="LOCAL" />
       <updated>1742826960055</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="grafana for observability">
+      <option name="closed" value="true" />
+      <created>1743084023882</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1743084023882</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="rm distributed-tracing folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="rm distributed-tracing folder" />
+    <MESSAGE value="grafana for observability" />
+    <option name="LAST_COMMIT_MESSAGE" value="grafana for observability" />
   </component>
 </project>
