@@ -16,22 +16,29 @@
 * **ConfigMaps:** Son objetos que permiten almacenar datos de configuración no confidenciales en forma de pares clave-valor. Se pueden inyectar en los contenedores como variables de entorno, argumentos de comandos o archivos de configuración. Permiten desacoplar la configuración del código de la aplicación, facilitando la administración y actualización de parámetros sin necesidad de reconstruir la imagen del contenedor.
 * **Secrets:** Son objetos similares a los ConfigMaps, pero se utilizan para almacenar información sensible y confidencial (como contraseñas, tokens o claves). Proporcionan un mecanismo seguro para inyectar datos sensibles en los contenedores. Los datos almacenados en un Secret están codificados (por ejemplo, en base64) y se gestionan de manera que se minimicen los riesgos de exposición.
 
+![](./img/conceptos.png)
+
 ### Arquitectura de Kubernetes
-1. **Master Node (Nodo Maestro):** Es el nodo responsable de la administración y control del clúster. Sus principales componentes son:
-    1. **API Server:** Es el punto de entrada a Kubernetes. Gestiona todas las solicitudes REST y actúa como interfaz para el clúster. Valida y procesa comandos de **kubectl** o herramientas externas.
-    2. **Controller Manager:** Supervisa el estado del clúster y actúa para garantizar que coincida con el estado deseado. Controla operaciones como la creación de Pods y la reparación de fallos.
-    3. **Scheduler:** Asigna los Pods a los Worker Nodes según la disponibilidad de recursos. Considera factores como uso de CPU, memoria y afinidad de nodos.
-    4. **etcd (Almacén de datos):** Base de datos distribuida que almacena el estado del clúster. Registra información de configuración, redes y estado de los Pods.
+1. **Control Plane Node (Master Node):** Es el nodo responsable de la administración y control del clúster. Sus principales componentes son:
+    1. **API Server:** Es el punto de entrada a Kubernetes. Gestiona todas las solicitudes REST y actúa como interfaz para el clúster. Valida y procesa comandos de **kubectl** o herramientas externas. Además, es el componente central de comunicación entre todos los demás componentes del clúster.
+    2. **Controller Manager:** Supervisa el estado del clúster y actúa para garantizar que coincida con el estado deseado. Agrupa varios controladores (como Replication Controller, Node Controller y Job Controller) que gestionan tareas como la creación de Pods, la reparación de fallos y el mantenimiento del estado de los recursos.
+    3. **Scheduler:** Asigna los Pods a los Worker Nodes según la disponibilidad de recursos. Considera factores como uso de CPU, memoria, restricciones, políticas de afinidad/anti-afinidad y cualquier otro requerimiento o restricción del clúster.
+    4. **etcd (Almacén de datos):** Base de datos distribuida clave-valor que almacena el estado y la configuración del clúster. Registra información crítica como el estado de los Pods, redes y otros datos de configuración. Es fundamental para la persistencia y la alta disponibilidad del clúster.
 
-2. **Worker Nodes (Nodos de Trabajo):** Son los nodos donde se ejecutan las aplicaciones dentro de los Pods. Cada nodo de trabajo contiene los siguientes componentes:
-    1. **Kubelet:** Agente que se ejecuta en cada nodo y se comunica con el API Server. Garantiza que los contenedores dentro de los Pods estén en ejecución y saludables.
-    2. **Kube-Proxy:** Gestiona las reglas de red para permitir la comunicación entre los Pods y Services. Controla el tráfico dentro y fuera del clúster.
-    3. **Container Runtime:** Se encarga de ejecutar los contenedores (Docker, containerd, CRI-O, etc.). Interactúa con Kubelet para iniciar, detener y gestionar contenedores.
+![Control Plane Node](./img/control_plane.png)
+![Control Plane Node](./img/kubeadm-ha-topology-stacked-etcd.svg)
 
-3. **Comunicación entre Master y Worker Nodes**
-    1. El **Master Node** asigna cargas de trabajo a los **Worker Nodes**.
-    2. Los **Worker Nodes** informan constantemente su estado al **Master Node**.
-    3. La API Server maneja las interacciones entre los componentes del clúster.
+2. **Worker Nodes:** Son los nodos donde se ejecutan las aplicaciones dentro de los Pods. Cada nodo de trabajo contiene los siguientes componentes:
+    1. **Kubelet:** Agente que se ejecuta en cada nodo y se comunica con el API Server. Garantiza que los contenedores dentro de los Pods estén en ejecución, saludables y en el estado deseado. Además, interactúa con el container runtime para iniciar y gestionar los contenedores.
+    2. **Kube-Proxy:** Gestiona las reglas de red para permitir la comunicación entre los Pods y Services. Configura reglas de **iptables** o **IPVS** para el enrutamiento de tráfico dentro y fuera del clúster, garantizando que las solicitudes de red lleguen a los Pods adecuados.
+    3. **Container Runtime:** Se encarga de ejecutar los contenedores (puede ser Docker, containerd, CRI-O, etc.). Interactúa con Kubelet para iniciar, detener y gestionar contenedores, cumpliendo con los requerimientos de Kubernetes mediante la Container Runtime Interface (CRI).
+
+![Worker Node](./img/worker_node.png)
+
+3. **Comunicación entre Control Plane y Worker Nodes**
+    1. El **Control Plane Node** asigna cargas de trabajo a los **Worker Nodes**.
+    2. Los **Worker Nodes** informan constantemente su estado al **Control Plane Node**, permitiendo que este realice un monitoreo continuo.
+    3. La **API Server** maneja las interacciones entre los diferentes componentes del clúster, asegurando que las operaciones se realicen correctamente y que el estado del clúster se mantenga conforme al deseado.
 
 ![Arquitectura de Kubernetes](./img/kubernetes-node-kubernetes-master.jpg)
 
