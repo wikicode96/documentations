@@ -33,6 +33,8 @@ En este test se usan anotaciones de **Mockito puro** (`@Mock`, `@InjectMocks`). 
 * El mock creado por `@Mock` **no se inyecta en el contexto de Spring**.
 * Por tanto, al llamar al endpoint con `MockMvc`, se ejecuta el bean real, **no el mock**, y el `verify(...)` **falla**.
 
+![bad test schema](./img/badtest.svg)
+
 ## ✅ Ejemplo correcto – GoodInjectionTest
 
 ```java
@@ -44,6 +46,8 @@ private MyDependency dependencyMock;
 * Al usarla, Spring reemplaza el bean real de `MyDependency` por el mock **dentro del contexto de Spring**.
 * Entonces cuando se llama al endpoint, `MyService` recibe el mock.
 * El `verify(...)` funciona correctamente.
+
+![good test schema](./img/goodtest.svg)
 
 ## 🧠 Diferencia clave
 | Anotación      | Contexto    | ¿Inyecta en beans de Spring? | Uso recomendado                 |
