@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: spring-kafka-streams-demo
+
+  cloud:
+    stream:
+      kafka:
+        streams:
+          binder:
+            application-id: kafka-streams-demo
+            brokers: localhost:9092
+      bindings:
+        input-topic-in-0:
+          destination: input-topic
+        output-topic-1-out-0:
+          destination: output-topic-1
+        output-topic-2-out-0:
+          destination: output-topic-2
